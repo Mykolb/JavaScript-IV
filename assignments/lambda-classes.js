@@ -32,6 +32,19 @@
 
 //Create a new constructor
 
+//end of class
+
+
+
+//start of projectManager 
+
+//Declare class keyword
+
+//Create a new constructor
+
+
+
+
 
 //Objects
 
@@ -76,7 +89,7 @@ const Siri = new Student({
     Phrase: 'That is stupid',
 });
 
-const Caleb = new ProjectManager({
+const Caleb = new projectManager({
     name: 'Caleb',
     location: 'NY',
     age: '25',
@@ -86,7 +99,7 @@ const Caleb = new ProjectManager({
     Phrase: 'You can do it',
 });
 
-const Oly = new ProjectManager({
+const Oly = new projectManager({
     name: 'Oly',
     location: 'DR',
     age: '30',
