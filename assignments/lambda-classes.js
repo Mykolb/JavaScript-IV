@@ -13,37 +13,76 @@ class Person {
       }
    //Methods   
    speak() {
-       console.log(`Hello my name is ${this.name}, I am from ${location}`);
+       console.log(`Hello my name is ${this.name}, I am from ${this.location}`);
    }
-}
+};
 //end of class 
 
 
 
 //start of Instructor
-
-//declare class keyword
-
-   
+class Instructor extends Person {
+    //declare class keyword
+    constructor(instructorAttributes) { 
+    super(instructorAttributes)
+    this.speciality = instructorAttributes.name;  
+    this.faveLangauge = instructorAttributes.speciality;
+    this.catchPhrase = instructorAttributes.catchPhrase;
+    }
 //Methods
+    demo() {
+        console.log(`Today we are learning about ${subject}.`); //not connected to anything yet, may need to be just a regular word 
+    }
+    grade() {
+        console.log(`{this.name} receives a perfect score on subject.`);
+    }
+};
 
 //end of class
 
 
 
 //start of Student 
-
+class Student extends Instructor {
 //Declare class keyword
-
-//Create a new constructor
-
+constructor(studentAttributes) {
+super(studentAttributes)
+this.previousBackground = studentAttributes.previousBackground;
+this.className = studentAttributes.className;
+this.faveSubjects = studentAttributes.faveSubjects;
+}
+//Methods
+    listsSubjects() {
+        console.log();
+    }
+    prAssignment() {
+        console.log(`${this.name} has submitted a PR for ${subject}`); //not connected to anything yet 
+    }
+    sprintChallenge() {
+        console.log(`${this.name} has begin sprint challenge on {subject}.`);
+    }
+};
 //end of class
 
 
 
 //start of projectManager 
-
+class ProjectManager extends Student {
 //Declare class keyword
+constructor(pMAttributes) {
+super(pMAttributes)
+    this.gradClassName = pMAttributes.gradClassName;
+    this.favInstructor = pMAttributes.favInstructor;
+}
+    //Methods
+    standUp() {
+        console.log(`name announces to {channel}, @channel standy times!`);
+    }
+    debugsCode() {
+        console.log(`name debugs ${this.name}'s code on {subject}.`);
+    }
+};
+
 
 //Create a new constructor
 
@@ -55,60 +94,3 @@ class Person {
 //Objects//
 
 
-const Josh = new Instructor({
-    name: 'Josh',
-    location: 'California',
-    age: 35,
-    gender: 'male',
-    favLanguage: 'JavaScript',
-    specialty: 'Front-end',
-    Phrase: 'The big boss',
-});
-
-const Rose = new Instructor({
-    name: 'Rose',
-    location: 'DC',
-    age: 28,
-    gender: 'female',
-    favLanguage: 'React',
-    specialty: 'Back-end',
-    Phrase: 'Just do it',
-});
-
-const Piper = new Student({
-    name: 'Piper',
-    location: 'Barcelona',
-    age: 20,
-    gender: 'female',
-    previousBackground: 'Artist',
-    className: 'Web17',
-    favSubjects: ['science', 'art', 'health'],
-});
-
-const Seryy = new Student({
-    name: 'Seryy',
-    location: 'Paris',
-    age: 30,
-    gender: 'male',
-    previousBackground: 'Accountant',
-    className: 'DS5',
-    favSubjects: ['Html', 'CSS', 'JS'],
-});
-
-const Caleb = new projectManager({
-    name: 'Caleb',
-    location: 'NY',
-    age: 25,
-    gender: 'male',
-    gradClassName: 'CS8',
-    favInstructor: 'Cam',
-    });
-
-const Oly = new projectManager({
-    name: 'Oly',
-    location: 'DR',
-    age: 30,
-    gender: 'female',
-    gradClassName: 'CS2',
-    favInstructor: 'Burt',
- });
