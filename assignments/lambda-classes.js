@@ -2,15 +2,21 @@
 
 //start of Person
 
-
 //Declare class keyword
-
+class Person {
 // Create a new constructor
-
-//Methods
-
+    constructor(attributes) {
+     this.name = attributes.name;
+     this.age = attributes.age;
+     this.location = attributes.location;
+     this.gender = attributes.gender;
+      }
+   //Methods   
+   speak() {
+       console.log(`Hello my name is ${this.name}, I am from ${location}`);
+   }
+}
 //end of class 
-
 
 
 
@@ -18,8 +24,7 @@
 
 //declare class keyword
 
-//create a new constructor
- 
+   
 //Methods
 
 //end of class
@@ -42,17 +47,18 @@
 
 //Create a new constructor
 
+//end of class 
 
 
 
 
-//Objects
+//Objects//
 
 
 const Josh = new Instructor({
     name: 'Josh',
     location: 'California',
-    age: '35',
+    age: 35,
     gender: 'male',
     favLanguage: 'JavaScript',
     specialty: 'Front-end',
@@ -62,7 +68,7 @@ const Josh = new Instructor({
 const Rose = new Instructor({
     name: 'Rose',
     location: 'DC',
-    age: '28',
+    age: 28,
     gender: 'female',
     favLanguage: 'React',
     specialty: 'Back-end',
@@ -72,39 +78,37 @@ const Rose = new Instructor({
 const Piper = new Student({
     name: 'Piper',
     location: 'Barcelona',
-    age: '20',
+    age: 20,
     gender: 'female',
-    favLanguage: 'Python',
-    specialty: 'back-end',
-    Phrase: 'Coachella',
+    previousBackground: 'Artist',
+    className: 'Web17',
+    favSubjects: ['science', 'art', 'health'],
 });
 
-const Siri = new Student({
-    name: 'Siri',
+const Seryy = new Student({
+    name: 'Seryy',
     location: 'Paris',
-    age: '30',
+    age: 30,
     gender: 'male',
-    favLanguage: 'Java',
-    specialty: 'back-end',
-    Phrase: 'That is stupid',
+    previousBackground: 'Accountant',
+    className: 'DS5',
+    favSubjects: ['Html', 'CSS', 'JS'],
 });
 
 const Caleb = new projectManager({
     name: 'Caleb',
     location: 'NY',
-    age: '25',
+    age: 25,
     gender: 'male',
-    favLanguage: 'Ruby',
-    specialty: 'back-end',
-    Phrase: 'You can do it',
-});
+    gradClassName: 'CS8',
+    favInstructor: 'Cam',
+    });
 
 const Oly = new projectManager({
     name: 'Oly',
     location: 'DR',
-    age: '30',
+    age: 30,
     gender: 'female',
-    favLanguage: 'PHP',
-    specialty: 'back-end',
-    Phrase: 'That looks good',
-});
+    gradClassName: 'CS2',
+    favInstructor: 'Burt',
+ });
