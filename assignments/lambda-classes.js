@@ -56,7 +56,7 @@ this.faveSubjects = studentAttributes.faveSubjects;
         console.log();
     }
     prAssignment() {
-        console.log(`${this.name} has submitted a PR for ${subject}`); //not connected to anything yet 
+        console.log(`${this.name} has submitted a PR for {subject}`); //not connected to anything yet 
     }
     sprintChallenge() {
         console.log(`${this.name} has begin sprint challenge on {subject}.`);
@@ -84,8 +84,6 @@ super(pMAttributes)
 };
 
 
-//Create a new constructor
-
 //end of class 
 
 
@@ -93,4 +91,71 @@ super(pMAttributes)
 
 //Objects//
 
+const josh = new Instructor({
+    name: 'Josh',
+    location: 'California',
+    age: '35',
+    gender: 'male',
+    faveLanguage: 'JavaScript',
+    specialty: 'Front-end',
+    catchPhrase: 'The big boss',
+});
 
+const rose = new Instructor({
+    name: 'Rose',
+    location: 'DC',
+    age: '28',
+    gender: 'female',
+    faveLanguage: 'React',
+    specialty: 'Back-end',
+    catchPhrase: 'Just do it',
+});
+
+const piper = new Student({
+    name: 'Piper',
+    location: 'Barcelona',
+    age: '20',
+    gender: 'female',
+    previousBackground: 'stylist',
+    className: 'Web17',
+    faveSubjects: ['CSS', 'Java', 'React']
+});
+
+const siri = new Student({
+    name: 'Siri',
+    location: 'Paris',
+    age: '30',
+    gender: 'male',
+    previousBackground: 'actor',
+    className: 'CS4',
+    faveSubjects: ['HTML', 'Python', 'JS']
+});
+
+const caleb = new ProjectManager({
+    name: 'Caleb',
+    location: 'NY',
+    age: '25',
+    gender: 'male',
+    gradClassName: 'CS17',
+    favInstructor: 'Ryan'
+});
+
+const oly = new ProjectManager({
+    name: 'Oly',
+    location: 'DR',
+    age: '30',
+    gender: 'female',
+    gradClassName: 'CS5',
+    favInstructor: 'Cam'
+}); 
+
+
+
+console.log(oly.speak);
+console.log(josh.demo);
+console.log(rose.grade);
+console.log(piper.listsSubjects);
+console.log(siri.prAssignment);
+console.log(piper.sprintChallenge);
+console.log(caleb.standUp);
+console.log(oly.debugsCode);
